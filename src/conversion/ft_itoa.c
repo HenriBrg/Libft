@@ -6,18 +6,18 @@
 /*   By: hberger <hberger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 16:51:25 by hberger           #+#    #+#             */
-/*   Updated: 2019/10/16 18:15:54 by hberger          ###   ########.fr       */
+/*   Updated: 2019/10/16 18:34:06 by hberger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	int nb;
-	int size;
-	int neg;
-	char *str;
+	int		nb;
+	int		size;
+	int		neg;
+	char	*str;
 
 	nb = n;
 	size = 0;
@@ -31,7 +31,7 @@ char *ft_itoa(int n)
 	if ((str = (char*)malloc(sizeof(char) * (size + 1))) == NULL)
 		return (NULL);
 	if (neg == 1)
-			str[0] = '-';
+		str[0] = '-';
 	str[size--] = '\0';
 	while (n)
 	{
