@@ -6,7 +6,7 @@
 /*   By: hberger <hberger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 17:17:16 by hberger           #+#    #+#             */
-/*   Updated: 2019/10/16 17:33:12 by hberger          ###   ########.fr       */
+/*   Updated: 2019/10/16 18:12:37 by hberger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,13 +50,15 @@ t_list			*ft_lstnew(void *content);
 void			ft_bzero(void *s, size_t n);
 void			*ft_calloc(size_t count, size_t size);
 void			*ft_memset(void *b, int c, size_t len);
+void			*ft_memcpy(void *dst, const void *src, size_t n);
 
 /*
 ** Fonctions d'affichage
 */
 
-void			ft_putnbr(int nb)
-void			ft_putstr(const char *str)
+void			ft_putchar(char c);
+void			ft_putnbr(int nb);
+void			ft_putstr(const char *str);
 
 /*
 ** Fonctions sur les strings
