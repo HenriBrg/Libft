@@ -7,7 +7,7 @@ SRCS =  src/str/ft_strcmp.c  src/str/ft_strncmp.c src/str/ft_strcat.c		   \
 		src/str/ft_strstr.c  src/str/ft_strsub.c  src/str/ft_strlen.c		   \
 																			   \
 		src/others/ft_bzero.c src/others/ft_calloc.c src/others/ft_memset.c    \
-		src/others/ft_memcpy.c												   \
+		src/others/ft_memcpy.c src/others/ft_isdigit.c src/others/ft_isalpha.c \
 																			   \
 		src/print/ft_putnbr.c src/print/ft_putstr.c	src/print/ft_putchar.c	   \
 																			   \
