@@ -6,7 +6,7 @@
 /*   By: hberger <hberger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 17:17:16 by hberger           #+#    #+#             */
-/*   Updated: 2019/10/16 20:24:07 by hberger          ###   ########.fr       */
+/*   Updated: 2019/10/16 22:11:16 by hberger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,7 @@ char			*ft_strnstr(const char *str, const char *to_find, size_t len);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strstr(const char *str, const char *to_find);
 char			*ft_strsub(char const *s, unsigned int start, size_t len);
+char			*ft_strndup(const char *src, size_t n);
 size_t			ft_strlen(const char *str);
 
 #endif
