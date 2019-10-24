@@ -10,6 +10,7 @@ SRCS =  src/str/ft_strcmp.c  src/str/ft_strncmp.c src/str/ft_strcat.c		   \
 		src/others/ft_memcpy.c src/others/ft_isdigit.c src/others/ft_isalpha.c \
 																			   \
 		src/print/ft_putnbr.c src/print/ft_putstr.c	src/print/ft_putchar.c	   \
+		src/print/ft_putstr_fd.c src/print/ft_putendl_fd.c					   \
 																			   \
 		src/lst/ft_lstadd_back.c src/lst/ft_lstadd_front.c 					   \
 		src/lst/ft_lstsize.c     src/lst/ft_lstnew.c						   \

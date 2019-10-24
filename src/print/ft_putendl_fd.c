@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strndup.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hberger <hberger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/16 22:10:42 by hberger           #+#    #+#             */
-/*   Updated: 2019/10/24 18:16:40 by hberger          ###   ########.fr       */
+/*   Created: 2019/10/07 17:03:16 by hberger           #+#    #+#             */
+/*   Updated: 2019/10/20 18:09:07 by hberger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-char	*ft_strndup(const char *src, size_t n)
+void	ft_putendl_fd(char *s, int fd)
 {
-	size_t		i;
-	char		*output;
+	int i;
 
-	i = 0;
-	while (src[i] != '\0' && i < n)
-		i++;
-	if ((output = malloc(sizeof(char) * (i + 1))) == NULL)
-		return (NULL);
-	i = 0;
-	while (src[i] != '\0' && i < n)
-	{
-		output[i] = src[i];
-		i++;
-	}
-	output[i] = '\0';
-	return (output);
+	i = -1;
+	while (s[++i])
+		write(fd, s + i, 1);
+	write(fd, "\n", 1);
 }

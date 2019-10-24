@@ -6,7 +6,7 @@
 /*   By: hberger <hberger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 17:09:36 by hberger           #+#    #+#             */
-/*   Updated: 2019/10/16 18:34:23 by hberger          ###   ########.fr       */
+/*   Updated: 2019/10/24 18:23:19 by hberger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,8 @@ char	*ft_intmaxt_toa_base(char *base, intmax_t n)
 	intmax_t	nb;
 
 	nb = n;
-	if (nb == -2147483648 || nb == 0)
+	if (!(size = 0) && (nb == -2147483648 || nb == 0))
 		return (nb == 0) ? ft_strdup("0") : ft_strdup("-2147483648");
-	size = 0;
 	while (nb)
 	{
 		nb = nb / (int)ft_strlen(base);
@@ -32,9 +31,8 @@ char	*ft_intmaxt_toa_base(char *base, intmax_t n)
 		n *= -1;
 	if ((str = (char*)malloc(sizeof(char) * (size + 1))) == NULL)
 		return (NULL);
-	if (neg == 1)
+	if (!(str[size--] = '\0') && neg == 1)
 		str[0] = '-';
-	str[size--] = '\0';
 	while (n)
 	{
 		str[size--] = base[n % ft_strlen(base)];
