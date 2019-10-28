@@ -6,7 +6,7 @@
 /*   By: hberger <hberger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 17:17:16 by hberger           #+#    #+#             */
-/*   Updated: 2019/10/24 18:32:30 by hberger          ###   ########.fr       */
+/*   Updated: 2019/10/28 19:00:22 by henri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@
 # include <stdlib.h>
 # include <string.h>
 # include <stdint.h>
+# include <fcntl.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 64
+# endif
 
 typedef struct	s_list
 {
@@ -53,6 +58,7 @@ void			*ft_memset(void *b, int c, size_t len);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
 int				ft_isdigit(int c);
 int				ft_isalpha(int c);
+int				get_next_line(int fd, char **line);
 
 /*
 ** Fonctions d'affichage
