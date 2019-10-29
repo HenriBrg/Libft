@@ -6,7 +6,7 @@
 /*   By: hberger <hberger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 17:17:16 by hberger           #+#    #+#             */
-/*   Updated: 2019/10/28 19:00:22 by henri            ###   ########.fr       */
+/*   Updated: 2019/10/29 22:07:50 by henri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ typedef struct	s_list
 */
 
 int				ft_atoi(const char *str);
+double			ft_atod(const char *str);
 char			*ft_itoa(int n);
 char			*ft_itoa_base(char *base, int n);
 char			*ft_intmaxt_toa_base(char *base, intmax_t n);
@@ -58,6 +59,7 @@ void			*ft_memset(void *b, int c, size_t len);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
 int				ft_isdigit(int c);
 int				ft_isalpha(int c);
+int				ft_isspace(int c);
 int				get_next_line(int fd, char **line);
 
 /*
