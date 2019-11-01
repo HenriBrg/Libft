@@ -6,7 +6,7 @@
 /*   By: hberger <hberger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 17:17:16 by hberger           #+#    #+#             */
-/*   Updated: 2019/10/29 22:07:50 by henri            ###   ########.fr       */
+/*   Updated: 2019/10/30 11:52:12 by henri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ void			ft_putstr_fd(char *s, int fd);
 ** Fonctions sur les strings
 */
 
+int				ft_stroccurs(char *src, char c);
 int				ft_strcmp(const char *s1, const char *s2);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strcat(char *dest, const char *src);

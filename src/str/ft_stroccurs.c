@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_stroccurs.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hberger <hberger@student.42.fr>            +#+  +:+       +#+        */
+/*   By: henri <henri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/07 17:20:58 by hberger           #+#    #+#             */
-/*   Updated: 2019/11/01 12:00:26 by henri            ###   ########.fr       */
+/*   Created: 2019/10/30 11:51:48 by henri             #+#    #+#             */
+/*   Updated: 2019/10/30 11:51:57 by henri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+int ft_stroccurs(char *src, char c)
 {
-	void	*p;
+	int	i;
+	int	x;
 
-	if (!(p = malloc(count * size)))
-		return (p);
-	ft_bzero(p, count * size);
-	return (p);
+	x = 0;
+	i = -1;
+	while (src[++i] != '\0')
+	{
+		if (src[i] == c)
+			x++;
+	}
+	return (x);
 }
