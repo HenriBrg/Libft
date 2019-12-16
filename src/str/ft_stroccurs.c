@@ -6,13 +6,13 @@
 /*   By: henri <henri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 11:51:48 by henri             #+#    #+#             */
-/*   Updated: 2019/10/30 11:51:57 by henri            ###   ########.fr       */
+/*   Updated: 2019/12/17 00:11:14 by hberger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-int ft_stroccurs(char *src, char c)
+int	ft_stroccurs(char *src, char c)
 {
 	int	i;
 	int	x;
