@@ -6,7 +6,7 @@
 /*   By: hberger <hberger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/17 00:00:15 by hberger           #+#    #+#             */
-/*   Updated: 2019/12/17 00:15:19 by hberger          ###   ########.fr       */
+/*   Updated: 2019/12/18 14:08:07 by henri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int		words(char *str, char *charset)
 		if (check(charset, str[i]))
 		{
 			x++;
-			while (check(charset, str[i]))
+			while (str[i] != '\0' && check(charset, str[i]))
 				i++;
 		}
 		else
@@ -92,7 +92,7 @@ char	**ft_strsplit(char *str, char *charset)
 		if (check(charset, str[i]))
 		{
 			result[x] = copy(str + i, charset);
-			while (check(charset, str[i]))
+			while (str[i] != '\0' && check(charset, str[i]))
 				i++;
 			x++;
 		}
