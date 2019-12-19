@@ -6,7 +6,7 @@
 /*   By: hberger <hberger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/17 00:00:15 by hberger           #+#    #+#             */
-/*   Updated: 2019/12/18 14:08:07 by henri            ###   ########.fr       */
+/*   Updated: 2019/12/19 18:05:54 by hberger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	*copy(char *str, char *charset)
 	char	*output;
 
 	i = 0;
-	while (check(charset, str[i]))
+	while (str[i] != '\0' && check(charset, str[i]))
 		i++;
 	if ((output = (char*)malloc(sizeof(char) * (i + 1))) == NULL)
 		return (NULL);
@@ -62,7 +62,7 @@ char	*copy(char *str, char *charset)
 	while (str[i] != '\0')
 		if (check(charset, str[i]))
 		{
-			while (check(charset, str[i]))
+			while (str[i] != '\0' && check(charset, str[i]))
 			{
 				output[i] = str[i];
 				i++;
