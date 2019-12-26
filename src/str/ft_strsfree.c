@@ -6,7 +6,7 @@
 /*   By: hberger <hberger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/17 00:18:18 by hberger           #+#    #+#             */
-/*   Updated: 2019/12/17 00:21:07 by hberger          ###   ########.fr       */
+/*   Updated: 2019/12/26 19:32:03 by henri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,5 @@ void	ft_strsfree(char **strs)
 	i = -1;
 	while (strs[++i] != 0)
 		free(strs[i]);
+	free(strs);
 }
